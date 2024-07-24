@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Имран Газамов - Резюме</title>
+    <title>Резюме Имрана Газамова</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -24,26 +24,81 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             text-align: left;
         }
-        img {
-            display: block;
-            margin: 0 auto 20px;
-            border-radius: 50%;
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
         }
-        h1, h2, h3, h4, h5, h6 {
+        .header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
             color: #333;
         }
-        p, ul {
+        .header p {
+            margin: 0;
+            color: #777;
+        }
+        .contact, .languages, .skills, .additional-info {
+            margin-bottom: 20px;
+        }
+        .section-title {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .section-content {
             color: #555;
         }
-        ul {
+        .section-content ul {
             list-style: none;
             padding: 0;
         }
-        ul li {
+        .section-content ul li {
             margin: 5px 0;
         }
-        .skills, .languages, .personal-qualities, .hobbies, .additional-info {
+        .languages ul li, .skills ul li {
+            display: flex;
+            justify-content: space-between;
+        }
+        .languages ul li::after, .skills ul li::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 5px;
+            background: #ddd;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+        .languages ul li span, .skills ul li span {
+            width: 50px;
+            height: 5px;
+            background: #00f;
+            display: block;
+            border-radius: 5px;
+        }
+        .job, .education {
             margin-bottom: 20px;
+        }
+        .job ul, .education ul {
+            list-style: none;
+            padding: 0;
+        }
+        .job ul li, .education ul li {
+            margin: 10px 0;
+        }
+        .job-title, .education-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+        .job-description, .education-description {
+            color: #555;
         }
         .video-container {
             text-align: center;
@@ -53,94 +108,124 @@
 </head>
 <body>
     <div class="container">
-        <img src="photo" alt="Имран Г." width="200"/>
-        
-        <h2>1. Личные данные</h2>
-        <ul>
-            <li><strong>Фамилия и имя:</strong> Газамов Имран</li>
-            <li><strong>Дата рождения:</strong> 27.08.2005</li>
-            <li><strong>Город проживания:</strong> Бишкек, Октябрьский район</li>
-            <li><strong>Контактный телефон:</strong> 0555 725 755, 0508 120 645</li>
-            <li><strong>Email:</strong> imrikgaza@gmail.com</li>
-        </ul>
+        <div class="header">
+            <img src="photo" alt="Имран Газамов" />
+            <div>
+                <h1>Газамов Имран</h1>
+                <p>Бишкек, Октябрьский район</p>
+                <p>Возраст: 18 лет</p>
+            </div>
+        </div>
 
-        <h2>2. Цель</h2>
-        <p>Цель поиска работы: Развитие в области графического дизайна профессионального и творческого направления, где смогу эффективно применять свой опыт и навыки для создания оригинальных и качественных работ.</p>
+        <div class="contact">
+            <div class="section-title">Контакты</div>
+            <div class="section-content">
+                <ul>
+                    <li>Телефон: 0555 725 755, 0508 120 645</li>
+                    <li>Email: imrikgaza@gmail.com</li>
+                </ul>
+            </div>
+        </div>
 
-        <h2>3. Образование</h2>
-        <ul>
-            <li><strong>Специальность:</strong> Графический дизайнер, Моушен дизайнер, 3D художник</li>
-        </ul>
+        <!-- Job experience -->
+        <div class="job">
+            <div class="section-title">Опыт работы</div>
+            <div class="section-content">
+                <ul>
+                    <li>
+                        <div class="job-title">ООО «Умный дом», Дизайнер интерьера (01.06.23 - 27.04.24)</div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Разработка комфортных планировок.</li>
+                                <li>Выбор оптимальной отделки.</li>
+                                <li>Мебельное наполнение интерьера.</li>
+                                <li>3D-визуализация.</li>
+                                <li>Документальное оформление проектов.</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="job-title">ADM Marketing Group, Графический дизайнер (02.05.24 - 17.06.24)</div>
+                        <div class="job-description">
+                            <ul>
+                                <li>Графический дизайнер, Моушен Дизайнер, 3D Аниматор, 3D художник</li>
+                                <li><a href="https://www.instagram.com/award_of_the_year_kg_/">AWARD OF THE YEAR</a></li>
+                                <li><a href="https://www.instagram.com/iitf_kg/">ITF TOURISM</a></li>
+                                <li><a href="https://www.instagram.com/cyberkol.kg/">FEST CYBER-KOL 2024</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-        <h2>4. Опыт работы</h2>
-        <h3>Место работы 1</h3>
-        <ul>
-            <li><strong>Компания:</strong> Ul-AI Production</li>
-            <li><strong>Должность:</strong> Главный аниматор/моушен дизайнер, графический дизайнер</li>
-            <li><strong>Период работы:</strong> 01.06.23 - 27.04.24</li>
-            <li><strong>Обязанности и достижения:</strong> <a href="https://youtube.com/@kadammelody?si=QocwdTGh4ex4x9jz">YouTube Проект</a></li>
-        </ul>
+        <!-- Education -->
+        <div class="education">
+            <div class="section-title">Образование</div>
+            <div class="section-content">
+                <ul>
+                    <li>
+                        <div class="education-title">Московский художественно-промышленный институт, Бакалавр (2005)</div>
+                        <div class="education-description">Дизайн среды, Дизайнер интерьеров</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
 
-        <h3>Место работы 2</h3>
-        <ul>
-            <li><strong>Компания:</strong> ADM Marketing Group</li>
-            <li><strong>Должность:</strong> Графический дизайнер, Моушен Дизайнер, 3D Аниматор, 3D художник</li>
-            <li><strong>Период работы:</strong> 02.05.24 - 17.06.24</li>
-            <li><strong>Обязанности и достижения:</strong> 
-                <a href="https://www.instagram.com/award_of_the_year_kg_/">AWARD OF THE YEAR</a>, 
-                <a href="https://www.instagram.com/iitf_kg/">ITF TOURISM</a>, 
-                <a href="https://www.instagram.com/cyberkol.kg/">FEST CYBER-KOL 2024</a>
-            </li>
-        </ul>
-
+        <!-- Skills -->
         <div class="skills">
-            <h2>5. Навыки</h2>
-            <ul>
-                <li><strong>Технические навыки:</strong> Adobe Photoshop, Illustrator, After Effects, Premier Pro, Animate, Krita, Blender 3D, Unreal Engine 5, Davinci Resolve</li>
-                <li><strong>Мягкие навыки:</strong> Коммуникация с клиентами, обратная связь, эффективное взаимодействие в группе, аналитическое мышление и навык выполнения проектов в сжатые сроки.</li>
-            </ul>
+            <div class="section-title">Навыки</div>
+            <div class="section-content">
+                <ul>
+                    <li>Illustrator</li>
+                    <li>ArhiCAD</li>
+                    <li>Corel Draw</li>
+                    <li>Photoshop</li>
+                    <li>3D Max</li>
+                    <li>Indesign</li>
+                    <li>Верстка</li>
+                    <li>Ретушь</li>
+                </ul>
+            </div>
         </div>
 
+        <!-- Languages -->
         <div class="languages">
-            <h2>6. Языки</h2>
-            <ul>
-                <li><strong>Русский:</strong> C2</li>
-                <li><strong>Английский:</strong> B1</li>
-                <li><strong>Другие языки:</strong> Кыргызский язык</li>
-            </ul>
+            <div class="section-title">Языки</div>
+            <div class="section-content">
+                <ul>
+                    <li>
+                        Русский
+                        <span style="width: 90%;"></span>
+                    </li>
+                    <li>
+                        Английский
+                        <span style="width: 60%;"></span>
+                    </li>
+                    <li>
+                        Кыргызский язык
+                        <span style="width: 70%;"></span>
+                    </li>
+                </ul>
+            </div>
         </div>
 
-        <div class="personal-qualities">
-            <h2>7. Дополнительная информация</h2>
-            <h3>Личные качества:</h3>
-            <ul>
-                <li><strong>Ответственность:</strong> Стараюсь всегда выполнять задачи вовремя и с высоким уровнем качества</li>
-                <li><strong>Коммуникабельность:</strong> Хотя я больше предпочитаю слушать, чем говорить, мне легко находить общий язык с коллегами и клиентами, что эффективно в работе.</li>
-                <li><strong>Внимательность к деталям:</strong> Иногда мне кажется, что я уделяю слишком много времени мелочам, но это помогает избежать ошибок и улучшить общий результат.</li>
-                <li><strong>Обучаемость:</strong> Люблю учиться и осваивать новые навыки. Но порой такое ощущение, что я мог бы делать это быстрее.</li>
-            </ul>
-        </div>
-
-        <div class="hobbies">
-            <h3>Увлечения и хобби:</h3>
-            <ul>
-                <li>Волейбол</li>
-                <li>Шахматы</li>
-                <li>Фото и видеосъёмка</li>
-                <li>Художественное и концепт рисование</li>
-            </ul>
-        </div>
-
+        <!-- Additional info -->
         <div class="additional-info">
-            <h3>Другая полезная информация:</h3>
-            <ul>
-                <li>Небольшой опыт программирования на языке: Java, HTML и CSS</li>
-            </ul>
+            <div class="section-title">Дополнительная информация</div>
+            <div class="section-content">
+                <ul>
+                    <li><strong>Личные качества:</strong> Ответственность, Коммуникабельность, Внимательность к деталям, Обучаемость</li>
+                    <li><strong>Увлечения и хобби:</strong> Волейбол, Шахматы, Фото и видеосъёмка, Художественное и концепт рисование</li>
+                    <li><strong>Другая полезная информация:</strong> Небольшой опыт программирования на языке: Java, HTML и CSS</li>
+                </ul>
+            </div>
         </div>
 
+        <!-- Video container -->
         <div class="video-container">
             <h3>Моя работа:</h3>
-            <iframe width="280" height="158" src="https://www.youtube.com/embed/illuZU179Yk?si=XenSxlW0iM9LIJB-" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/illuZU179Yk?si=XenSxlW0iM9LIJB-" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 </body>
